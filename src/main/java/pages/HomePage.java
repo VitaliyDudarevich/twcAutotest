@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HomePage {
     private WebDriver driver;
@@ -15,6 +14,8 @@ public class HomePage {
 
     public SignInRegisterPage clickSignIn(){
         driver.findElement(signInLink).click();
+        driver.findElement(signInLink).click();
         return new SignInRegisterPage(driver);
+
     }
 }
