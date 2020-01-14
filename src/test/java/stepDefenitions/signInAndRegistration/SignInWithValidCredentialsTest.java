@@ -1,13 +1,13 @@
 package stepDefenitions.signInAndRegistration;
 
 import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 import pages.MyAccountPage;
+import pages.PageURL;
 import pages.SignInRegisterPage;
 
 import java.util.concurrent.TimeUnit;
@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class SignInWithValidCredentialsTest {
     private WebDriver driver;
     private HomePage homePage;
+    private PageURL pageURL;
 
     @Before
     public void setUp () {
@@ -23,12 +24,13 @@ public class SignInWithValidCredentialsTest {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         homePage = new HomePage(driver);
+        pageURL = new PageURL(driver);
     }
-    @Given("I'm on the Sign in and registration page")
+/*    @Given("I'm on the Sign in and registration page")
     public void SignInAndRegistrationPage() {
         driver.get("https://www.thewhitecompany.com/uk/login");
         System.out.println("Navigate to log in page");
-    }
+    }*/
 
     @When("Try to sign in with valid login and valid password")
     public void tryToSignInWithValidLoginAndValidPassword() {

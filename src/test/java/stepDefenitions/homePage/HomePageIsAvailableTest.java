@@ -45,6 +45,7 @@ public class HomePageIsAvailableTest {
         SignInRegisterPage title = new SignInRegisterPage(driver);
         Assert.assertEquals("SIGN IN TO YOUR ACCOUNT", title.getSignInAndRegistrationHeader());
         System.out.println("Navigate to Sign in and registration page");
+
        /* Date dateNow = new Date();
         SimpleDateFormat format = new SimpleDateFormat("hh_mm_ss");
         String filename = format.format(dateNow) + ".png";
@@ -56,6 +57,7 @@ public class HomePageIsAvailableTest {
             e.printStackTrace();
         }*/
     }
+
     @After
     public void tierDown(){
         driver.quit();
