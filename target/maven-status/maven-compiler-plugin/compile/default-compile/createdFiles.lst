@@ -1,0 +1,4 @@
+pages\PageURL.class
+pages\SignInRegisterPage.class
+pages\HomePage.class
+pages\MyAccountPage.class

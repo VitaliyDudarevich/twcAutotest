@@ -1,7 +1,9 @@
-Feature: Sign in and registration page
+ Feature: Sign in and registration page5
 
-  Scenario: Sign in with valid credentials
-    Given I'm on the "afisha tut.by"
+
+
+  Scenario: Sign in with valid credentials 2
+    Given I'm on the "home page"
 #    When Try to sign in with valid login and valid password
 #    Then Successfully logged in
 

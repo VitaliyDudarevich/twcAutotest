@@ -1,0 +1,4 @@
+stepDefenitions\utils\OpenPage.class
+stepDefenitions\homePage\HomePageIsAvailableTest.class
+stepDefenitions\signInAndRegistration\SignInWithValidCredentialsTest.class
+runners\RunCucumberTest.class

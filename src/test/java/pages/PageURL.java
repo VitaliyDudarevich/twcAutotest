@@ -13,8 +13,8 @@ public class PageURL {
 
     static Map<String, String> pageURL = new HashMap();
     static {
-        pageURL.put("home page onliner.by", "https://www.onliner.by/");
-        pageURL.put("afisha tut.by","https://afisha.tut.by/");
+        pageURL.put("home page", "https://www.thewhitecompany.com/uk/");
+        pageURL.put("sign in and registration page","https://www.thewhitecompany.com/uk/login");
     }
 
 
