@@ -1,18 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import stepDefenitions.utils.Browser;
 
 public class MyAccountPage {
-    private WebDriver driver;
 
-    public MyAccountPage(WebDriver driver) {
-        this.driver = driver;
-    }
-        private By myAccountHeader = By.xpath("//h1");
+    private By myAccountHeader = By.xpath("//h1");
 
     public String getMyAccountHeader () {
-        return driver.findElement(myAccountHeader).getText();
+        return Browser.getInstance().findElement(myAccountHeader).getText();
 
     }
 }

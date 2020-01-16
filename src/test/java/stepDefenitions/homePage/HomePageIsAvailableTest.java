@@ -43,7 +43,7 @@ public class HomePageIsAvailableTest {
 
     @Then("Navigate to Sign in and registration page")
     public void navigateToSignInAndRegistrationPage() throws IOException {
-        SignInRegisterPage title = new SignInRegisterPage(driver);
+        SignInRegisterPage title = new SignInRegisterPage();
         Assert.assertEquals("SIGN IN TO YOUR ACCOUNT", title.getSignInAndRegistrationHeader());
         System.out.println("Navigate to Sign in and registration page");
 

@@ -2,14 +2,13 @@ package stepDefenitions.signInAndRegistration;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
+import org.junit.Assert;
 import pages.HomePage;
 import pages.MyAccountPage;
 import pages.PageURL;
 import pages.SignInRegisterPage;
 
 public class SignInWithValidCredentialsTest {
-    private WebDriver driver;
     private HomePage homePage;
     private PageURL pageURL;
 
@@ -23,20 +22,29 @@ public class SignInWithValidCredentialsTest {
         pageURL = new PageURL(driver);
     }*/
 
-    @When("Try to sign in with valid login and valid password")
-    public void tryToSignInWithValidLoginAndValidPassword() {
-        SignInRegisterPage setEmail = new SignInRegisterPage(driver);
-        setEmail.setEmailaddress("DV@test.test");
-        System.out.println("Email Address set");
+    @When("Try to sign in with valid (.*) and (.*)")
+    public void tryToSignInWithValidEmailAndPassword(String email, String password) {
+        SignInRegisterPage signInRegisterPage = new SignInRegisterPage();
+        signInRegisterPage.setEmailaddress(email);
+        signInRegisterPage.setPassword(password);
+        signInRegisterPage.clickSignInButton();
+        System.out.println("The email set is  " + "\""+email+"\"");
+        System.out.println("The password set is " + "\""+password+"\"");
     }
+
+
 
     @Then("Successfully logged in")
     public void successfullyLoggedIn() {
-        SignInRegisterPage setPassword = new SignInRegisterPage(driver);
-        MyAccountPage myAccountHeader = new MyAccountPage(driver);
-        setPassword.setPassword("Test922922");
-        setPassword.clickSignInButton();
+        MyAccountPage myAccountPage = new MyAccountPage();
+        Assert.assertEquals("MY ACCOUNT", myAccountPage.getMyAccountHeader());
+
     }
+
+
+
+
+
 /*   @After
     public void tierDown() {
       Browser.destroy();

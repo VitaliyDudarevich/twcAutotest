@@ -1,14 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import stepDefenitions.utils.Browser;
 
 public class SignInRegisterPage {
-    private WebDriver driver;
-
-    public SignInRegisterPage(WebDriver driver) {
-        this.driver = driver;
-    }
 
     private By heading = By.xpath("//div[@class='heading-section__title']/h1");
     private By emailAddressInput = By.xpath("//input[@name='j_username']");
@@ -21,19 +16,19 @@ public class SignInRegisterPage {
 
 
     public String getSignInAndRegistrationHeader(){
-        return driver.findElement(heading).getText();
+        return Browser.getInstance().findElement(heading).getText();
     }
 
-    public void setEmailaddress(String str){
-        driver.findElement(emailAddressInput).sendKeys(str);
+    public void setEmailaddress(String email){
+       Browser.getInstance().findElement(emailAddressInput).sendKeys(email);
     }
 
     public void setPassword(String str) {
-        driver.findElement(passwordInput).sendKeys(str);
+        Browser.getInstance().findElement(passwordInput).sendKeys(str);
     }
 
     public void clickSignInButton(){
-        driver.findElement(signInButton).click();
+        Browser.getInstance().findElement(signInButton).click();
     }
 
 }

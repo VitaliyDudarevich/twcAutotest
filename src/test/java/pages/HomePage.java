@@ -15,7 +15,7 @@ public class HomePage {
     public SignInRegisterPage clickSignIn(){
         driver.findElement(signInLink).click();
      //   driver.findElement(signInLink).click();
-        return new SignInRegisterPage(driver);
+        return new SignInRegisterPage();
 
     }
 }
