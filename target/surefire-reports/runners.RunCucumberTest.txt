@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: runners.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 51.579 sec
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.312 sec <<< FAILURE!
+Sign in with valid credentials 2(Sign in and registration page5)  Time elapsed: 13.003 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[MY] ACCOUNT> but was:<[SIGN IN TO YOUR] ACCOUNT>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefenitions.signInAndRegistration.SignInWithValidCredentialsTest.successfullyLoggedIn(SignInWithValidCredentialsTest.java:40)
+	at ?.Successfully logged in(file:src/test/java/scenarios/SignInAndRegistrationPageTest.feature:8)
+

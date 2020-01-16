@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="runners.RunCucumberTest" time="51.244" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="runners.RunCucumberTest" time="13.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_211\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -65,5 +65,23 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Sign in and registration page" name="Sign in with valid credentials" time="51.244"/>
+  <testcase classname="Sign in and registration page5" name="Sign in with valid credentials 2" time="13.003">
+    <failure message="expected:&lt;[MY] ACCOUNT&gt; but was:&lt;[SIGN IN TO YOUR] ACCOUNT&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[MY] ACCOUNT&gt; but was:&lt;[SIGN IN TO YOUR] ACCOUNT&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at stepDefenitions.signInAndRegistration.SignInWithValidCredentialsTest.successfullyLoggedIn(SignInWithValidCredentialsTest.java:40)
+	at ✽.Successfully logged in(file:src/test/java/scenarios/SignInAndRegistrationPageTest.feature:8)
+</failure>
+    <system-out>The email set is  &quot;DV@test.test&quot;
+The password set is &quot;Test922922&quot;
+</system-out>
+    <system-err>Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614}) on port 4522
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1579180369.853][WARNING]: Timed out connecting to Chrome, retrying...
+Jan 16, 2020 4:12:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+[1579180373.914][WARNING]: Timed out connecting to Chrome, retrying...
+</system-err>
+  </testcase>
 </testsuite>
