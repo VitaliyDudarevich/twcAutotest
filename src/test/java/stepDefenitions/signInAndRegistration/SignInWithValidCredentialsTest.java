@@ -3,10 +3,13 @@ package stepDefenitions.signInAndRegistration;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.HomePage;
 import pages.MyAccountPage;
 import pages.PageURL;
 import pages.SignInRegisterPage;
+import stepDefenitions.utils.Browser;
 
 public class SignInWithValidCredentialsTest {
     private HomePage homePage;
@@ -28,20 +31,17 @@ public class SignInWithValidCredentialsTest {
         signInRegisterPage.setEmailaddress(email);
         signInRegisterPage.setPassword(password);
         signInRegisterPage.clickSignInButton();
-        System.out.println("The email set is  " + "\""+email+"\"");
-        System.out.println("The password set is " + "\""+password+"\"");
+        WebDriverWait wait = new WebDriverWait(Browser.getInstance(), 3 );
+        MyAccountPage myAccountPage = new MyAccountPage();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(myAccountPage.myOrderTail));
     }
-
-
 
     @Then("Successfully logged in")
     public void successfullyLoggedIn() {
         MyAccountPage myAccountPage = new MyAccountPage();
         Assert.assertEquals("MY ACCOUNT", myAccountPage.getMyAccountHeader());
-
+        System.out.println("test completed");
     }
-
-
 
 
 
