@@ -11,7 +11,7 @@ public class OpenPage {
 
 
     @Given("I'm on the {string}")
-    public void iMOnThe(String arg0) {
-        Browser.getInstance().get(PageURL.returnURL(arg0));
+    public void iMOnThe(String pageName) {
+        Browser.getInstance().get(PageURL.returnURL(pageName));
     }
 }

@@ -15,16 +15,6 @@ public class SignInWithValidCredentialsTest {
     private HomePage homePage;
     private PageURL pageURL;
 
-//    @Before
-/*    public void setUp () {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\v.dudarevich\\IdeaProjects\\twcAutotest2\\drivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        homePage = new HomePage(driver);
-        pageURL = new PageURL(driver);
-    }*/
-
     @When("Try to sign in with valid (.*) and (.*)")
     public void tryToSignInWithValidEmailAndPassword(String email, String password) {
         SignInRegisterPage signInRegisterPage = new SignInRegisterPage();
@@ -40,7 +30,22 @@ public class SignInWithValidCredentialsTest {
     public void successfullyLoggedIn() {
         MyAccountPage myAccountPage = new MyAccountPage();
         Assert.assertEquals("MY ACCOUNT", myAccountPage.getMyAccountHeader());
-        System.out.println("test completed");
+    }
+
+    @When("Try to sign in with invalid (.*) or invalid (.*)")
+    public void tryToSignInWithAnInvalidEmailOrInvalidPassword(String email, String password) {
+        SignInRegisterPage signInRegisterPage = new SignInRegisterPage();
+        signInRegisterPage.setEmailaddress(email);
+        signInRegisterPage.setPassword(password);
+        signInRegisterPage.clickSignInButton();
+     //   System.out.println("Email = "+email + "\npassword = "+password+ "\n");
+    }
+
+    @Then("The validation message (.*) is shown")
+    public void theValidationMessageIsShown(String validationMessage) {
+        SignInRegisterPage signInRegisterPage = new SignInRegisterPage();
+        Assert.assertEquals(validationMessage.replace("\"",""),
+                Browser.getInstance().findElement(signInRegisterPage.incorrectUserOrPasswordError).getText());
     }
 
 
