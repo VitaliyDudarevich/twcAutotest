@@ -1,5 +1,6 @@
 package stepDefenitions.signInAndRegistration;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -50,8 +51,8 @@ public class SignInWithValidCredentialsTest {
 
 
 
-/*   @After
+    @After
     public void tierDown() {
       Browser.destroy();
-   }*/
+   }
 }

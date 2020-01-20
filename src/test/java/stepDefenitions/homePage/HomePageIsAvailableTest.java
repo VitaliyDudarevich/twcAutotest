@@ -1,6 +1,5 @@
 package stepDefenitions.homePage;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -59,8 +58,8 @@ public class HomePageIsAvailableTest {
         }*/
     }
 
-    @After
+/*    @After
     public void tierDown(){
-//        driver.quit();
-    }
+        Browser.destroy();
+    }*/
 }
