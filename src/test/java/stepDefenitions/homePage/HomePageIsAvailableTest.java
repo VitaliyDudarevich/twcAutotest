@@ -16,21 +16,6 @@ public class HomePageIsAvailableTest {
     private HomePage homePage;
     private SignInRegisterPage signInRegisterPage;
 
-//    @Before
-/*    public void setUp () {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\v.dudarevich\\IdeaProjects\\twcAutotest2\\drivers\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-        homePage = new HomePage(driver);
-        signInRegisterPage = new SignInRegisterPage(driver);
-    }*/
-
-/*    @Given("I'm on the home page")
-    public void iMOnTheHomePage() {
-    driver.get("https://www.thewhitecompany.com/uk");
-        System.out.println("I'm on the home page");
-    }*/
 
     @When("Click to Sign in and registration link")
     public void clickToSignInAndRegistrationLink() {
@@ -45,21 +30,5 @@ public class HomePageIsAvailableTest {
         SignInRegisterPage title = new SignInRegisterPage();
         Assert.assertEquals("SIGN IN TO YOUR ACCOUNT", title.getSignInAndRegistrationHeader());
         System.out.println("Navigate to Sign in and registration page");
-
-       /* Date dateNow = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("hh_mm_ss");
-        String filename = format.format(dateNow) + ".png";
-
-        File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(screenshot, new File("C:\\Screenshots\\"+ filename));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
     }
-
-/*    @After
-    public void tierDown(){
-        Browser.destroy();
-    }*/
 }

@@ -1,6 +1,5 @@
 package stepDefenitions.signInAndRegistration;
 
-import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -11,6 +10,7 @@ import pages.MyAccountPage;
 import pages.PageURL;
 import pages.SignInRegisterPage;
 import stepDefenitions.utils.Browser;
+import stepDefenitions.utils.Utils;
 
 public class SignInWithValidCredentialsTest {
     private HomePage homePage;
@@ -47,12 +47,6 @@ public class SignInWithValidCredentialsTest {
         SignInRegisterPage signInRegisterPage = new SignInRegisterPage();
         Assert.assertEquals(validationMessage.replace("\"",""),
                 Browser.getInstance().findElement(signInRegisterPage.incorrectUserOrPasswordError).getText());
+        Utils.takeScreenshot("Login validation message ");
     }
-
-
-
-    @After
-    public void tierDown() {
-      Browser.destroy();
-   }
 }
