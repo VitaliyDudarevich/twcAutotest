@@ -1,9 +1,0 @@
-pages\PageURL.class
-stepDefenitions\utils\OpenPage.class
-stepDefenitions\utils\Browser.class
-stepDefenitions\signInAndRegistration\SignInWithValidCredentialsTest.class
-pages\HomePage.class
-runners\RunCucumberTest.class
-pages\SignInRegisterPage.class
-stepDefenitions\homePage\HomePageIsAvailableTest.class
-pages\MyAccountPage.class

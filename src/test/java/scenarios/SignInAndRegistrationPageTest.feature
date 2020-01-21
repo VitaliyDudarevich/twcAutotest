@@ -17,7 +17,7 @@
    Examples:
     | email                 |password           |
     |email                  |password           |
- #   |email@                 |password           |
+    |email@                 |password           |
  #   |email@test             |password           |
      |                       |password           |
  #   |DV@test.test           |                   |
