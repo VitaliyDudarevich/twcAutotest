@@ -1,0 +1,6 @@
+to run the test in maven with test use the following command
+mvn clean install -Dcucumber.options="--tags <tags>"
+
+the following tags are available
+@smoketest
+@regressiontest

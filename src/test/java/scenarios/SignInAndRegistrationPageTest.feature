@@ -1,7 +1,7 @@
  Feature: Sign in and registration page
 
 
-
+   @regressiontest
   Scenario Outline: Sign in with valid credentials
     Given I'm on the "sign in and registration page"
     When Try to sign in with valid <email> and <password>
