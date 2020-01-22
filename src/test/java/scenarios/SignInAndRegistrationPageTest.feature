@@ -10,16 +10,16 @@
       |email        |password   |
       |DV@test.test |Test922922 |
 
-  Scenario Outline: Try to sign in with invalid credentials
-    Given I'm on the "sign in and registration page"
-    When Try to sign in with invalid <email> or invalid <password>
-    Then The validation message "We don't recognise your details. Please check your email and password and try again" is shown
-   Examples:
-    | email                 |password           |
-    |email                  |password           |
-    |email@                 |password           |
+ #Scenario Outline: Try to sign in with invalid credentials
+ #  Given I'm on the "sign in and registration page"
+ #  When Try to sign in with invalid <email> or invalid <password>
+ #  Then The validation message "We don't recognise your details. Please check your email and password and try again" is shown
+ # Examples:
+ #  | email                 |password           |
+ #  |email                  |password           |
+ #  |email@                 |password           |
  #   |email@test             |password           |
-     |                       |password           |
+ #   |                       |password           |
  #   |DV@test.test           |                   |
  #   |                       |                   |
  #   |email@test.            |password           |
