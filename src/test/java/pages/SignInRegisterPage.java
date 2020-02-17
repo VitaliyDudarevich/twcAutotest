@@ -8,7 +8,7 @@ public class SignInRegisterPage {
     private By heading = By.xpath("//div[@class='heading-section__title']/h1");
     private By emailAddressInput = By.xpath("//input[@name='j_username']");
     private By passwordInput = By.xpath("//input[@name='j_password']");
-    private By signInButton = By.xpath("//div[@class='button' and contains (text(),'Sign in')]");
+    private By signInButton = By.xpath("//button[@type=\"button\" and contains (text(),'Sign in')]");
     private By forgotPasswordLink = By.xpath("//div [@class='cs_cy au_aw']");
     private By showCTA = By.xpath("//span [@class='cs_co']");
     public By incorrectUserOrPasswordError = By.xpath("//div[contains (text(),'Please check your email and password')]");

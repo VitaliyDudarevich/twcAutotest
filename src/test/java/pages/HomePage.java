@@ -10,12 +10,13 @@ public class HomePage {
         this.driver = driver;
     }
 
-    private By signInLink = By.xpath("//a[@href='/uk/login']");
+    private By signInLink = By.xpath("//a[@href='https://www.thewhitecompany.com/uk/my-account']");
+    private By search = By.xpath("//div[@class='flex-container']/div[@class='labeled-icon']");
 
     public SignInRegisterPage clickSignIn(){
         driver.findElement(signInLink).click();
-     //   driver.findElement(signInLink).click();
         return new SignInRegisterPage();
 
     }
+
 }

@@ -3,7 +3,6 @@ package stepDefenitions.homePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.HomePage;
 import pages.SignInRegisterPage;
@@ -19,9 +18,8 @@ public class HomePageIsAvailableTest {
 
     @When("Click to Sign in and registration link")
     public void clickToSignInAndRegistrationLink() {
-        By signInLink = By.xpath("//a[@href='/uk/login']");
-        Browser.getInstance().findElement(signInLink).click();
-//        SignInRegisterPage signInRegisterPage = homePage.clickSignIn();
+        HomePage homePage = new HomePage(Browser.getInstance());
+        homePage.clickSignIn();
         System.out.println("Click to Sign in and registration link");
     }
 
